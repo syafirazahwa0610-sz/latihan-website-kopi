@@ -1,0 +1,137 @@
+/* ================================
+   STYLE UMUM (GLOBAL)
+================================ */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8e0c7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* ================================
+   NAVBAR
+================================ */
+nav.navbar, 
+header nav {
+    background-color: #7a4a24 !important;
+    border-bottom: 3px solid #d1a273;
+}
+
+.navbar-brand,
+.nav-link {
+    font-weight: bold;
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: #d1a273 !important;
+}
+
+/* ================================
+   HEADING & TEXT
+================================ */
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+    color: #7a4a24;
+}
+
+p, li {
+    font-size: 16px;
+}
+
+/* ================================
+   CARD PRODUK & TESTIMONI
+================================ */
+.card {
+    border-radius: 10px;
+    border: 1px solid #d1a273;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+    border-radius: 10px 10px 0 0;
+}
+
+/* Rating bintang */
+.rating {
+    font-size: 20px;
+    color: #f7b731;
+    margin-bottom: 8px;
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+    background-color: #7a4a24;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* ================================
+   TABEL PRODUK
+================================ */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+thead {
+    background-color: #7a4a24;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #d1a273;
+}
+
+td[colspan] {
+    background-color: #ffe8d0;
+    font-weight: bold;
+}
+
+/* ================================
+   BUTTON
+================================ */
+button, .btn {
+    background-color: #7a4a24;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-weight: 600;
+}
+
+button:hover, .btn:hover {
+    background-color: #d1a273;
+    color: #222;
+}
+
+/* ================================
+   FORM
+================================ */
+input, textarea {
+    border-radius: 6px;
+    border: 1px solid #d1a273 !important;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border: 2px solid #7a4a24 !important;
+}
+
+/* ================================
+   GAMBAR HALAMAN UTAMA
+================================ */
+.hero-img {
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}

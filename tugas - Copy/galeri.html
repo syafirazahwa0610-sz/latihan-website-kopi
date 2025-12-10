@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - Chigon Shop</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            background: #faf7f2;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav.navbar {
+            background-color: #7a4a24;
+        }
+
+        h2.judul-halaman {
+            margin-top: 40px;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            color: #6a4221;
+        }
+
+        /* KEGIATAN */
+        .galeri {
+            width: 90%;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .galeri .card-custom {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        .galeri .card-custom img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* PRODUK */
+        .produk-container {
+            width: 90%;
+            margin: 35px auto 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .produk-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            transition: 0.2s;
+        }
+
+        .produk-card:hover {
+            transform: scale(1.03);
+        }
+
+        .produk-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .btn-detail {
+            padding: 8px 14px;
+            border: none;
+            background-color: #7a4a24;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .btn-detail:hover {
+            background-color: #5d351a;
+        }
+
+        /* MODAL */
+        .modal-custom {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-content-custom {
+            background: white;
+            padding: 20px;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 12px;
+            position: relative;
+            text-align: center;
+        }
+
+        .modal-content-custom img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .close-btn {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            cursor: pointer;
+            font-size: 30px;
+        }
+
+        footer {
+            background-color: #7a4a24;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark px-4">
+            <a class="navbar-brand fw-bold" href="index.html">Chigon Shop</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link fw-bold" href="index.html">Beranda</a>
+                    <a class="nav-link fw-bold" href="produk.html">Produk</a>
+                    <a class="nav-link fw-bold" href="tentang.html">Tentang Kami</a>
+                    <a class="nav-link fw-bold" href="kontak.html">Kontak</a>
+                    <a class="nav-link fw-bold active" aria-current="page" href="galeri.html">Galeri</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <h2 class="judul-halaman">Galeri Produk & Kegiatan</h2>
+
+    <section class="galeri">
+
+        <div class="card-custom">
+            <img src="images/pemotonganbahan.png" alt="">
+            <p>Proses dimulai dengan pemotongan bahan sesuai pola.</p>
+        </div>
+
+        <div class="card-custom">
+            <img src="images/jahit.jpeg" alt="">
+            <p>Penjahitan dilakukan rapi untuk menjaga kualitas.</p>
+        </div>
+
+        <div class="card-custom">
+            <img src="images/testimoni4.png" alt="">
+            <p>Beberapa ulasan dari para pembeli kami.</p>
+        </div>
+
+        <div class="card-custom">
+            <img src="images/toko-shopee1.png" alt="">
+            <p>Toko Chigon Shop kini hadir di Shopee.</p>
+        </div>
+
+    </section>
+
+    <h2 class="judul-halaman">Galeri Produk</h2>
+
+    <section class="produk-container">
+
+        <!-- PRODUK 1 -->
+        <div class="produk-card">
+            <img src="images/chigon3.webp" alt="">
+            <h3>Celana Cargo Anak</h3>
+            <button class="btn-detail" data-target="modal1">Lihat Selengkapnya</button>
+        </div>
+
+        <div class="modal-custom" id="modal1">
+            <div class="modal-content-custom">
+                <span class="close-btn" data-close="modal1">&times;</span>
+                <img src="images/chigon3.webp" alt="">
+                <p>Bahan adem dan kuat cocok untuk aktivitas harian.</p>
+            </div>
+        </div>
+
+        <!-- PRODUK 2 -->
+        <div class="produk-card">
+            <img src="images/chigon4.webp" alt="">
+            <h3>Celana Pendek Chinos Anak</h3>
+            <button class="btn-detail" data-target="modal2">Lihat Selengkapnya</button>
+        </div>
+
+        <div class="modal-custom" id="modal2">
+            <div class="modal-content-custom">
+                <span class="close-btn" data-close="modal2">&times;</span>
+                <img src="images/chigon4.webp" alt="">
+                <p>Bahan chino premium, lembut dan nyaman dipakai.</p>
+            </div>
+        </div>
+
+        <!-- PRODUK 3 -->
+        <div class="produk-card">
+            <img src="images/chigon5.webp" alt="">
+            <h3>Celana Polos Anak</h3>
+            <button class="btn-detail" data-target="modal3">Lihat Selengkapnya</button>
+        </div>
+
+        <div class="modal-custom" id="modal3">
+            <div class="modal-content-custom">
+                <span class="close-btn" data-close="modal3">&times;</span>
+                <img src="images/chigon5.webp" alt="">
+                <p>Nyaman dipakai sehari-hari, ringan dan lembut.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Chigon Shop. Hak cipta dilindungi.</p>
+    </footer>
+
+    <script>
+        // buka modal
+        document.querySelectorAll(".btn-detail").forEach(btn => {
+            btn.addEventListener("click", function () {
+                const id = this.getAttribute("data-target");
+                document.getElementById(id).style.display = "flex";
+            });
+        });
+
+        // tutup modal
+        document.querySelectorAll(".close-btn").forEach(btn => {
+            btn.addEventListener("click", function () {
+                const id = this.getAttribute("data-close");
+                document.getElementById(id).style.display = "none";
+            });
+        });
+
+        // klik luar modal tutup
+        window.onclick = function(event) {
+            document.querySelectorAll(".modal-custom").forEach(modal => {
+                if (event.target === modal) modal.style.display = "none";
+            });
+        };
+    </script>
+
+</body>
+</html>

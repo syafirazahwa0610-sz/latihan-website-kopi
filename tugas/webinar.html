@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webinar - Chigon Shop</title>
+    <link rel="stylesheet" href="style-umkm.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logo.webp" alt="Logo Chigon Shop" />
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="tentang.html">Tentang Kami</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+                <li><a href="webinar.html">Webinar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <h2>Pendaftaran Webinar Promosi Produk</h2>
+        <p>Silakan isi formulir berikut untuk mendaftar webinar promosi produk Chigon Shop:</p>
+
+        <form id="formWebinar" action="#" method="post">
+            <label for="nama">Nama:</label><br>
+            <input type="text" id="nama" name="nama" required /><br><br>
+
+            <label for="nomor">Nomor HP:</label><br>
+            <input type="number" id="nomor" name="nomor" required /><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required /><br>
+
+            <label for="pilihan">Pilihan Topik Webinar:</label><br>
+            <select id="kategori" name="kategori">
+                <option value="trategiMarketing">Strategi Marketing di Dunia Digital</option>
+                <option value="mulaiMerintis">Tahapan Mulai Merintis Produk UMKM</option>
+                <option value="inovasi">Apa Saja Inovasi Bisnis yang Harus Dikembangkan</option>
+            </select><br><br>
+
+            <input type="checkbox" id="konfirmasi" name="konfirmasi" value="ya">
+            <label for="langganan">Saya ingin mengirim pendaftaran.</label><br><br>
+
+            <button type="submit">Kirim</button>
+            <button type="reset">Clean Data</button>
+
+            <div id="errorMsg" class="hidden"></div>
+            <div id="successMsg" class="hidden"></div>
+
+            <p id="errorMsg" style="color:red;"></p>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Chigon Shop</p>
+    </footer>
+    <script src = "script.js"></script>
+</body>
+</html>

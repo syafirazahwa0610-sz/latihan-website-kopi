@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak - Chigon Shop</title>
+    <link rel="stylesheet" href="style-umkm.css" />
+</head>
+<body>
+    <header>
+        <h1>Chigon Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="tentang.html">Tentang Kami</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Hubungi Kami</h2>
+        <p>Silakan isi formulir berikut untuk menghubungi tim Chigon Shop:</p>
+
+        <form action="#" method="post">
+            <label for="nama">Nama:</label><br>
+            <input for="text" id="nama" name="nama" required /><br><br> 
+
+            <label for="nomor">Nomor Telepon:</label><br>
+            <input for="text" id="nomor" name="nomor" required /><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required /><br><br>
+
+            <label for="tanggal">Tanggal Pengiriman Pesan:</label><br>
+            <input for="text" id="tanggal" name="tanggal" required /><br><br>
+
+            <label for="jenisKelamin">Jenis Kelamin:</label><br>
+            <select id="jenisKelamin" name="jenisKelamin">
+                <option value="perempuan">Perempuan</option>
+                <option value="lakilaki">Laki-laki</option>
+                <option value="rahasia">Memilih untuk sembunyikan jenis kelamin</option>
+            </select><br><br>
+
+            <label for="kategori">Kategori Pesan:</label><br>
+            <select id="kategori" name="kategori">
+                <option value="umum">Umum</option>
+                <option value="produk">Produk</option>
+                <option value="kerjasama">Kerja Sama</option>
+            </select><br><br>
+
+             <label for="file">Pilih File:</label><br>
+            <select id="file" name="file">
+                <option value="gambar">Gambar</option>
+                <option value="dokumen">Dokumen</option>
+            </select><br><br>
+            
+            <label for="pesan">Pesan:</label><br>
+            <textarea id="pesan" name="pesan" rows="5" cols="30"></textarea><br><br>    
+
+            <input type="checkbox" id="langganan">Saya ingin menerima newsletter</label><br><br>
+
+            <button type="submit">Kirim</button>
+            <button type="reset">Hapus Data</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Chigon Shop</p>
+    </footer>
+</body>
+</html>

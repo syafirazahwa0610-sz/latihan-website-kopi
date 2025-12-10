@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produk - UMKM Chigon Shop</title>
+    <link rel="stylesheet" href="style-umkm.css" />
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logo.webp" alt="Logo Chigon Shop" />
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="tentang.html">Tentang Kami</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+                <li><a href="webinar.html">Webinar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <h2>Produk Unggulan Kami</h2>
+        <p>Berikut daftar produk Chigon Shop yang kami sediakan:</p>
+        <div class="card">
+            <img src="images/galeri-deskripsi.webp" alt="Produk UMKM" width="150%">
+
+            <h3>Celana Cargo Anak</h3>
+            <p>Bahan adem dan nyaman untuk si kecil.</p>
+            <h3>Rating Produk: <span id="hasil-rating"></span></h3> 
+            <script> 
+                let rating = 4; 
+            
+                if (rating >= 4.5) { 
+                document.getElementById("hasil-rating").textContent = "★★★★★ Sangat Disarankan"; 
+                } else if (rating >= 3) { 
+                    document.getElementById("hasil-rating").textContent = "★★★ Rekomendasi Biasa"; 
+                } else { 
+                    document.getElementById("hasil-rating").textContent = "★ Tidak Direkomendasikan"; 
+                } 
+            </script> 
+         </div>
+
+            <h3>Layanan Unggulan:</h3>
+            <ul id="layanan-list"></ul>
+
+            <script>
+                let layanan = ["Gratis Ongkir", "Bayar di Tempat", "Jaminan Barang Sesuai"];
+                
+                layanan.forEach(function(item) {
+                    let li = document.createElement("li");
+                    li.textContent = item;
+                    document.getElementById("layanan-list").appendChild(li);
+                });
+            </script>
+
+        <table border="1" cellspacing="0" cellpadding="8">
+            <thead>
+                <tr>
+                    <th>Produk</th>
+                    <th>Ukuran</th>
+                    <th>Harga</th>
+                </tr>
+            </thead>
+            </tbody>
+                <tr>
+                    <td rowspan="3">Celana Pendek Chinos Anak</td>
+                    <td>S-M</td>
+                    <td>Rp 12.000</td>
+                </tr>
+                <tr>
+                    <td>L-XL</td>
+                    <td>Rp 16.000</td>
+                </tr>
+                <tr>
+                    <td>XXL-XXXL</td>
+                    <td>Rp 20.000</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">Celana Pendek Cargo Anak</td>
+                    <td>S-M</td>
+                    <td>Rp 16.000</td>
+                </tr>
+                <tr>
+                    <td>L-XL</td>
+                    <td>Rp 20.000</td>
+                </tr>
+                <tr>
+                    <td>XXL-XXXL</td>
+                    <td>Rp 24.000</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">Celana Pendek Motif Anak</td>
+                    <td>S-M</td>
+                    <td>Rp 16.000</td>
+                </tr>
+                <tr>
+                    <td>L-XL</td>
+                    <td>Rp 20.000</td>
+                </tr>
+                <tr>
+                    <td>XXL-XXXL</td>
+                    <td>Rp 24.000</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">Celana Pendek Polos Anak</td>
+                    <td>S-M</td>
+                    <td>Rp 12.000</td>
+                </tr>
+                <tr>
+                    <td>L-XL</td>
+                    <td>Rp 16.000</td>
+                </tr>
+                <tr>
+                    <td>XXL-XXXL</td>
+                    <td>Rp 20.000</td>
+                </tr>
+                </tr>
+                    <td colspan="3" style="text-align: center; background-color: #eee; ">
+                        Semua harga sudah termasuk PPN
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Profil Produk</h3>
+        <img src="images/produk-umkm1.webp" alt="Produk Chigon Shop" width="320" />
+        <img src="images/produk-umkm2.webp" width="350" />
+        <img src="images/produk-umkm3.webp" width="340" />
+        <p>Kami menyediakan aneka fashion anak langsung dari produksi tangan pertama.</p>
+
+        <h3>Dengarkan Cerita Kami</h3>
+        <audio controls>
+            <source src="audio/cerita-umkm.mp3" type="audio/mpeg">
+            Audio tidak tersedia di browser Anda.
+        </audio>
+
+        <video width="350" height="240" controls>
+            <source src="video/cerita-umkm1.mp4" type="video/mp4">
+            Browser Anda tidak mendukung video.
+        </video>
+        
+        <!-- === Bagian Percabangan: Kategori Usia === -->
+        <section class="bagian-bawah">
+        <div class="cek-usia">
+        <h2>Cek Kategori Usia Pelanggan</h2>
+        <form onsubmit="tampilUsia(event)">
+        <input type="number" id="usia" placeholder="Masukkan usia Anda">
+        <button onclick="cekUsia()">Cek</button>
+        </form>
+        <p id="hasil"></p>
+        </div>
+
+        <!-- === Bagian Fungsi: Hitung Total Belanja === -->
+        <section class="testimoni"> 
+        <div class="container"> 
+        <h2>Hitung Total Belanja</h2>
+        <form onsubmit="tampilTotal(event)">
+        <input type="number" id="harga" placeholder="Harga per item (Rp)">
+        <br><input type="number" id="jumlah" placeholder="Jumlah barang">
+        <br><br>
+        <button type="submit">Hitung</button>
+        </form>
+        <p id="total"></p>
+        </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Chigon Shop</p>
+    </footer>
+
+    <!-- // === Percabangan === -->
+     <script>
+        function cekUsia() {
+        let usia = document.getElementById("usia").value;
+        let hasil = "";
+        if (usia < 13) hasil = "Anak-anak";
+        else if (usia <= 17) hasil = "Remaja";
+        else if (usia <= 60) hasil = "Dewasa";
+        else hasil = "Lansia";
+
+        document.getElementById("hasil").innerText = "Kategori: " + hasil;
+        }
+
+        //  === Fungsi hitungTotal === -->
+        function hitungTotal(harga, jumlah) {
+        return harga * jumlah;
+        }
+
+        function tampilTotal(event) {
+        event.preventDefault();
+        const harga = document.getElementById("harga").value;
+        const jumlah = document.getElementById("jumlah").value;
+        const total = hitungTotal(harga, jumlah);
+        document.getElementById("total").innerText = "Total belanja: Rp " + total.toLocaleString();
+        }
+        </script>
+        <script src="script.js"></script> 
+    
+</body>
+</html>

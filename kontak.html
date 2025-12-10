@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak - Kopi Nusantara</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="js/form.js"></script>
+    <script type="module" src="js/newsletter.js"></script>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logo-kopi.png" alt="Logo Kopi Nusantara" />
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="tentang.html">Tentang Kami</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <h2>Hubungi Kami</h2>
+        <p>Silakan isi formulir berikut untuk menghubungi tim Kopi Nusantara:</p>
+
+            <form id="formKontak" action="#" method="post">
+                <label for="nama">Nama:</label><br>
+                <input type="text" id="nama" name="nama" />
+                <span class="error" id="errorNama"></span><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" />
+                <span class="error" id="errorEmail"></span><br><br>
+
+                <label for="kategori">Kategori Pesan:</label><br>
+                <select id="kategori" name="kategori">
+                    <option value="">-- Pilih Kategori --</option>
+                    <option value="umum">Umum</option>
+                    <option value="produk">Produk</option>
+                    <option value="kerjasama">Kerja Sama</option>
+                </select>
+                <span class="error" id="errorKategori"></span><br><br>
+
+                <label for="pesan">Pesan:</label><br>
+                <textarea id="pesan" name="pesan" rows="5" cols="30"></textarea>
+                <span class="error" id="errorPesan"></span><br><br>
+
+                <input type="checkbox" id="langganan" name="langganan" value="ya">
+                <label for="langganan">Saya ingin menerima newsletter</label><br><br>
+
+                <button type="submit">Kirim</button>
+
+                <!-- <p id="errorMsg" style="color:red;"></p> -->
+            </form>
+
+            <!-- <label for="nama">Nama:</label><br>
+            <input for="text" id="nama" name="nama" required /><br><br> 
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required /><br><br>
+
+            <label for="tanggal">Tanggal Pengiriman Pesan:</label><br>
+            <input for="text" id="nama" name="nama" required /><br><br>
+
+            <label for="jenisKelamin">Jenis Kelamin:</label><br>
+            <select id="jenisKelamin" name="jenisKelamin">
+                <option value="perempuan">Perempuan</option>
+                <option value="lakilaki">Laki-laki</option>
+                <option value="rahasia">Memilih untuk sembunyikan jenis kelamin</option>
+            </select><br><br>
+
+            <label for="kategori">Kategori Pesan:</label><br>
+            <select id="kategori" name="kategori">
+                <option value="umum">Umum</option>
+                <option value="produk">Produk</option>
+                <option value="kerjasama">Kerja Sama</option>
+            </select><br><br>
+
+            <label for="file">Pilih File:</label><br>
+            <select id="file" name="file">
+                <option value="gambar">Gambar</option>
+                <option value="dokumen">Dokumen</option>
+            </select><br><br>
+            
+            <label for="pesan">Pesan:</label><br>
+            <textarea id="pesan" name="pesan" rows="5" cols="30"></textarea><br><br>    
+
+            <input type="checkbox" id="langganan">Saya ingin menerima newsletter</label><br><br>
+
+            <button type="submit">Kirim</button>
+            <button type="reset">Hapus Data</button>
+        </form> -->
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kopi Nusantara</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

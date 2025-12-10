@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../tugas pw 1"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "pemograman web 1"
+	}
+}
